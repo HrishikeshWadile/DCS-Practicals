@@ -1,0 +1,60 @@
+============================================================
+       PRACTICAL 5 - LEADER ELECTION ALGORITHMS
+============================================================
+
+
+==================== BULLY ALGORITHM ====================
+
+PS D:\Study\College\B.Tech\DCS\Practicals\5> java BullyAlgorithm
+
+Enter number of processes: 5
+Enter current coordinator: 5
+Enter process that detects coordinator failure: 2
+
+Process 5 has failed.
+
+Process 2 starts an election.
+Process 2 sends ELECTION message to Process 3
+Process 3 sends OK message to Process 2
+
+Process 3 starts an election.
+Process 3 sends ELECTION message to Process 4
+Process 4 sends OK message to Process 3
+
+Process 4 starts an election.
+
+Process 4 becomes the new COORDINATOR.
+Coordinator message sent from Process 4 to Process 1
+Coordinator message sent from Process 4 to Process 2
+Coordinator message sent from Process 4 to Process 3
+
+Final Coordinator: Process 4
+
+
+==================== RING ALGORITHM ====================
+
+PS D:\Study\College\B.Tech\DCS\Practicals\5> java RingAlgorithm
+
+Enter number of processes: 5
+Enter current coordinator: 5
+Enter process that detects coordinator failure: 2
+
+Process 5 has failed.
+
+Process 2 starts an election.
+Election message reaches Process 2
+Election message reaches Process 3
+Election message reaches Process 4
+Election message reaches Process 1
+
+Election message returns to Process 2
+Election participants: [2, 3, 4, 1]
+
+Process 4 becomes the new COORDINATOR.
+Coordinator message sent from Process 4 to Process 1
+Coordinator message sent from Process 4 to Process 2
+Coordinator message sent from Process 4 to Process 3
+
+Final Coordinator: Process 4
+
+PS D:\Study\College\B.Tech\DCS\Practicals\5>

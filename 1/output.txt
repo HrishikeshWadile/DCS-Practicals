@@ -1,0 +1,31 @@
+==================== ECHO CLIENT OUTPUT ====================
+
+PS D:\Study\College\B.Tech\DCS\Practicals\1> java EchoClient
+
+Connected to Echo Server.
+Type a message (type 'exit' to quit):
+
+Client: Hello
+Server: Echo: Hello
+
+Client: How are you?
+Server: Echo: How are you?
+
+Client: exit
+Server: Echo: exit
+
+
+==================== ECHO SERVER OUTPUT ====================
+
+PS D:\Study\College\B.Tech\DCS\Practicals\1> java EchoServer
+
+Echo Server started...
+Waiting for clients...
+
+Client connected: /127.0.0.1
+
+Received from client: Hello
+Received from client: How are you?
+Received from client: exit
+
+Client connection closed.

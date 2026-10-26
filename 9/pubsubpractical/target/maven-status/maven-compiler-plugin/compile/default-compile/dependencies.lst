@@ -1,0 +1,10 @@
+classpath:C:\Users\Dell\.m2\repository\org\apache\activemq\activemq-broker\6.3.2\activemq-broker-6.3.2.jar	1279103:1792243688750
+classpath:C:\Users\Dell\.m2\repository\org\apache\activemq\activemq-client\6.3.2\activemq-client-6.3.2.jar	1519062:1792243689326
+classpath:C:\Users\Dell\.m2\repository\org\slf4j\slf4j-api\2.0.18\slf4j-api-2.0.18.jar	69982:1792243688843
+classpath:C:\Users\Dell\.m2\repository\jakarta\jms\jakarta.jms-api\3.1.0\jakarta.jms-api-3.1.0.jar	58964:1792243688912
+classpath:C:\Users\Dell\.m2\repository\org\fusesource\hawtbuf\hawtbuf\1.11\hawtbuf-1.11.jar	50155:1792243688843
+classpath:C:\Users\Dell\.m2\repository\org\apache\activemq\activemq-openwire-legacy\6.3.2\activemq-openwire-legacy-6.3.2.jar	694146:1792243689217
+classpath:C:\Users\Dell\.m2\repository\jakarta\annotation\jakarta.annotation-api\3.0.0\jakarta.annotation-api-3.0.0.jar	26378:1792243689377
+classpath:C:\Users\Dell\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.22.2\jackson-databind-2.22.2.jar	1708473:1792243689220
+classpath:C:\Users\Dell\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.22\jackson-annotations-2.22.jar	84211:1792243689019
+classpath:C:\Users\Dell\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.22.2\jackson-core-2.22.2.jar	594200:1792243689231

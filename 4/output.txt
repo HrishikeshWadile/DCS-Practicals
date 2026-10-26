@@ -1,0 +1,42 @@
+============================================================
+             PRACTICAL 4 - BERKELEY ALGORITHM
+============================================================
+
+PS D:\Study\College\B.Tech\DCS\Practicals\4> java BerkeleyAlgorithm
+
+Enter number of computers: 5
+
+Enter clock time of each computer:
+Computer 0: 30
+Computer 1: 12
+Computer 2: 4
+Computer 3: 72
+Computer 4: 3
+
+Master Computer: Computer 0
+Master Clock: 30
+
+Clock Differences:
+Computer 0 : 0
+Computer 1 : -18
+Computer 2 : -26
+Computer 3 : 42
+Computer 4 : -27
+
+Average Offset: -5
+
+Clock Adjustments:
+Computer 0 adjustment: -5
+Computer 1 adjustment: 13
+Computer 2 adjustment: 21
+Computer 3 adjustment: -47
+Computer 4 adjustment: 22
+
+Synchronized Clocks:
+Computer 0 : 25
+Computer 1 : 25
+Computer 2 : 25
+Computer 3 : 25
+Computer 4 : 25
+
+PS D:\Study\College\B.Tech\DCS\Practicals\4>

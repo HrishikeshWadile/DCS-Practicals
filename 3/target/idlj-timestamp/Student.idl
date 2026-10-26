@@ -1,0 +1,9 @@
+module StudentModule {
+
+    interface Student {
+
+        string getStudentName(in long rollNo);
+
+        string getBranch(in long rollNo);
+    };
+};

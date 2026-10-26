@@ -1,0 +1,25 @@
+==================== RMI SERVER OUTPUT ====================
+
+PS D:\Study\College\B.Tech\DCS\Practicals\2> java RMIServer
+
+RMI Server started...
+Calculator service is ready.
+
+
+==================== RMI CLIENT OUTPUT ====================
+
+PS D:\Study\College\B.Tech\DCS\Practicals\2> java RMIClient
+
+Connected to RMI Server.
+Enter the first number: 30
+Enter the second number: 25
+
+a = 30
+b = 25
+
+Addition = 55
+Subtraction = 5
+Multiplication = 750
+Division = 1
+
+PS D:\Study\College\B.Tech\DCS\Practicals\2>

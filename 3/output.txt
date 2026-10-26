@@ -1,0 +1,86 @@
+============================================================
+              PRACTICAL 3 - CORBA STUDENT
+============================================================
+
+
+==================== COMPILATION ====================
+
+PS D:\Study\College\B.Tech\DCS\Practicals\3> mvn clean compile
+
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.dcs:corba-student >------------------------
+[INFO] Building corba-student 1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ corba-student ---
+[INFO] Deleting D:\Study\College\B.Tech\DCS\Practicals\3\target
+[INFO] 
+[INFO] --- idlj:1.2.2:generate (generate-corba-sources) @ corba-student ---
+[INFO] Processing 1 grammar files to
+D:\Study\College\B.Tech\DCS\Practicals\3\target\generated-sources\idl
+[INFO] 
+[INFO] --- build-helper:3.6.0:add-source (add-generated-sources) @ corba-student ---
+[INFO] Source directory:
+D:\Study\College\B.Tech\DCS\Practicals\3\target\generated-sources\idl added.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ corba-student ---
+[INFO] skip non existing resourceDirectory
+D:\Study\College\B.Tech\DCS\Practicals\3\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ corba-student ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 9 source files with javac [debug target 17] to target\classes
+[WARNING] Supported source version 'RELEASE_8' from annotation processor
+'org.glassfish.corba.annotation.processing.ExceptionWrapperProcessor'
+less than -source '17'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.529 s
+[INFO] Finished at: 2026-08-29T21:56:47+05:30
+[INFO] ------------------------------------------------------------------------
+
+
+==================== CORBA SERVER ====================
+
+PS D:\Study\College\B.Tech\DCS\Practicals> cd 3
+
+PS D:\Study\College\B.Tech\DCS\Practicals\3> .\run-corba.ps1 exec:java "-Dexec.mainClass=StudentServer"
+
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.dcs:corba-student >------------------------
+[INFO] Building corba-student 1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- exec:3.5.0:java (default-cli) @ corba-student ---
+CORBA Server started...
+Student service is ready.
+Waiting for clients...
+
+
+==================== CORBA CLIENT ====================
+
+PS D:\Study\College\B.Tech\DCS\Practicals> cd 3
+
+PS D:\Study\College\B.Tech\DCS\Practicals\3> .\run-corba.ps1 exec:java "-Dexec.mainClass=StudentClient"
+
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.dcs:corba-student >------------------------
+[INFO] Building corba-student 1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- exec:3.5.0:java (default-cli) @ corba-student ---
+=================================
+       CORBA Student Client
+=================================
+Connected to CORBA Server.
+
+Roll Number : 2
+Student Name: Amit
+Branch      : Information Technology

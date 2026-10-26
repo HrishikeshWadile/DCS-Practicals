@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.dcs</groupId>
+    <artifactId>corba-student</artifactId>
+    <version>1.0</version>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+
+        <!-- CORBA API -->
+        <dependency>
+            <groupId>org.glassfish.corba</groupId>
+            <artifactId>glassfish-corba-omgapi</artifactId>
+            <version>4.2.4</version>
+        </dependency>
+
+        <!-- CORBA ORB -->
+        <dependency>
+            <groupId>org.glassfish.corba</groupId>
+            <artifactId>glassfish-corba-orb</artifactId>
+            <version>4.2.4</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+
+        <plugins>
+
+            <!-- Generate Java code from Student.idl -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>idlj-maven-plugin</artifactId>
+                <version>1.2.2</version>
+
+                <configuration>
+                    <compiler>glassfish</compiler>
+
+                    <sourceDirectory>
+                        ${project.basedir}/src/main/idl
+                    </sourceDirectory>
+
+                    <outputDirectory>
+                        ${project.build.directory}/generated-sources/idl
+                    </outputDirectory>
+
+                    <sources>
+                        <source>
+
+                            <includes>
+                                <include>Student.idl</include>
+                            </includes>
+
+                            <!-- Generate client-side code -->
+                            <emitStubs>true</emitStubs>
+
+                            <!-- Generate server-side POA -->
+                            <emitSkeletons>true</emitSkeletons>
+
+                        </source>
+                    </sources>
+
+                    <failOnError>true</failOnError>
+                </configuration>
+
+                <executions>
+                    <execution>
+                        <id>generate-corba-sources</id>
+
+                        <phase>generate-sources</phase>
+
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+
+                <dependencies>
+
+                    <dependency>
+                        <groupId>org.glassfish.corba</groupId>
+                        <artifactId>idlj</artifactId>
+                        <version>4.2.4</version>
+                    </dependency>
+
+                </dependencies>
+            </plugin>
+
+            <!-- Add generated sources -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.6.0</version>
+
+                <executions>
+
+                    <execution>
+
+                        <id>add-generated-sources</id>
+
+                        <phase>generate-sources</phase>
+
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
+
+                        <configuration>
+
+                            <sources>
+                                <source>
+                                    ${project.build.directory}/generated-sources/idl
+                                </source>
+                            </sources>
+
+                        </configuration>
+
+                    </execution>
+
+                </executions>
+
+            </plugin>
+
+            <!-- Java compiler -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+
+            </plugin>
+
+            <!-- Run server/client -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.5.0</version>
+            </plugin>
+
+        </plugins>
+
+    </build>
+
+</project>
